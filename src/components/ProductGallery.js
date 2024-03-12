@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProductCard from "./ProductCard";
 import styled from "styled-components";
 
@@ -6,7 +6,7 @@ const Container = styled.div`
   background-color: rgb(256, 232, 47, 50%);
   border-radius: 10px;
   width: 80%;
-  height: 100vh;
+  max-height: 100vh;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -35,10 +35,30 @@ const GridItem = styled.div`
   height: 300px;
 `;
 const ProductGallery = ({ products }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const loaderRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(loaderRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const handleIntersection = (entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
   return (
-    <Container>
+    <Container ref={loaderRef}>
       <GridContainer>
-        {products.slice(0, 8).map((product) => (
+        {products.slice(0, currentPage * 8).map((product) => (
           <GridItem key={product.id}>
             <ProductCard product={product} />
           </GridItem>
