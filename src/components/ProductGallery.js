@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: auto;
   padding: 10px;
   border: 3px solid rgb(256, 232, 47, 50%);
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 10px;
   margin-bottom: 20px;
 `;
@@ -36,7 +36,12 @@ const GridItem = styled.div`
 `;
 const ProductGallery = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [productList, setProductList] = useState([]);
   const loaderRef = useRef(null);
+
+  useEffect(() => {
+    setProductList(products.slice(0, 8));
+  }, [products]);
 
   useEffect(() => {
     const options = {
@@ -46,8 +51,9 @@ const ProductGallery = ({ products }) => {
     };
     const observer = new IntersectionObserver(handleIntersection, options);
     observer.observe(loaderRef.current);
+
     return () => observer.disconnect();
-  }, []);
+  }, [loaderRef]);
 
   const handleIntersection = (entries) => {
     const entry = entries[0];
@@ -55,15 +61,28 @@ const ProductGallery = ({ products }) => {
       setCurrentPage((prevPage) => prevPage + 1);
     }
   };
+
+  useEffect(() => {
+    if (currentPage > 1) {
+      const startIndex = (currentPage - 1) * 8;
+      const endIndex = currentPage * 8;
+      const newProductList = products.slice(startIndex, endIndex);
+      setProductList((firstProductSet) => [
+        ...firstProductSet,
+        ...newProductList,
+      ]);
+    }
+  }, [currentPage, products]);
   return (
-    <Container ref={loaderRef}>
+    <Container>
       <GridContainer>
-        {products.slice(0, currentPage * 8).map((product) => (
+        {productList.map((product) => (
           <GridItem key={product.id}>
             <ProductCard product={product} />
           </GridItem>
         ))}
       </GridContainer>
+      <div ref={loaderRef} />
     </Container>
   );
 };
