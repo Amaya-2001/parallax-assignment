@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_code": "G001",
+      "price": "Rs:5000",
+      "quantity": 12,
+      "img": "assets/image-1.jpg"
+    },
+    {
+      "id": 2,
+      "product_code": "G002",
+      "price": "Rs:6500",
+      "quantity": 10,
+      "img": "assets/image-2.webp"
+    },
+    {
+      "id": 3,
+      "product_code": "G003",
+      "price": "Rs:7000",
+      "quantity": 13,
+      "img": "assets/image-3.jpg"
+    },
+    {
+      "id": 4,
+      "product_code": "G004",
+      "price": "Rs:500",
+      "quantity": 14,
+      "img": "assets/image-4.webp"
+    },
+    {
+      "id": 5,
+      "product_code": "G005",
+      "price": "Rs:5100",
+      "quantity": 9,
+      "img": "assets/image-1.jpg"
+    },
+    {
+      "id": 6,
+      "product_code": "G006",
+      "price": "Rs:900",
+      "quantity": 3,
+      "img": "assets/image-3.jpg"
+    },
+    {
+      "id": 7,
+      "product_code": "G007",
+      "price": "Rs:9000",
+      "quantity": 11,
+      "img": "assets/image-2.webp"
+    },
+    {
+      "id": 8,
+      "product_code": "G008",
+      "price": "Rs:1100",
+      "quantity": 7,
+      "img": "assets/image-4.webp"
+    }
+  ]
+}
