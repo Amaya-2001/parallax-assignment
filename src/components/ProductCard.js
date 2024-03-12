@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const ImgContainer = styled.img`
@@ -17,9 +17,21 @@ const CardBody = styled.div`
 `;
 
 const ProductCard = ({ product }) => {
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImgIndex((prevIndex) =>
+        prevIndex === product.img.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [product.img.length]);
+
   return (
     <div>
-      <ImgContainer src={product.img} />
+      <ImgContainer src={product.img[currentImgIndex]} />
       <hr />
       <CardBody>
         Product Code<br></br> {product.product_code}

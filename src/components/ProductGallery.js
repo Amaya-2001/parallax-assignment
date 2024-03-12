@@ -38,7 +38,7 @@ const ProductGallery = ({ products }) => {
   return (
     <Container>
       <GridContainer>
-        {products.map((product) => (
+        {products.slice(0, 8).map((product) => (
           <GridItem key={product.id}>
             <ProductCard product={product} />
           </GridItem>

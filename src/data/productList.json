@@ -2,59 +2,169 @@
   "products": [
     {
       "id": 1,
-      "product_code": "G001",
+      "product_code": "B001",
       "price": "Rs:5000",
       "quantity": 12,
-      "img": "assets/image-1.jpg"
+      "img": ["assets/image-1.jpg", "assets/image-2.webp"]
     },
     {
       "id": 2,
-      "product_code": "G002",
+      "product_code": "B002",
       "price": "Rs:6500",
       "quantity": 10,
-      "img": "assets/image-2.webp"
+      "img": [
+        "assets/image-2.webp",
+        "assets/image-3.jpg",
+        "assets/image-4.webp"
+      ]
     },
     {
       "id": 3,
-      "product_code": "G003",
+      "product_code": "B003",
       "price": "Rs:7000",
       "quantity": 13,
-      "img": "assets/image-3.jpg"
+      "img": ["assets/image-3.jpg"]
     },
     {
       "id": 4,
-      "product_code": "G004",
+      "product_code": "B004",
       "price": "Rs:500",
       "quantity": 14,
-      "img": "assets/image-4.webp"
+      "img": [
+        "assets/image-1.jpg",
+        "assets/image-2.webp",
+        "assets/image-4.webp"
+      ]
     },
     {
       "id": 5,
-      "product_code": "G005",
+      "product_code": "B005",
       "price": "Rs:5100",
       "quantity": 9,
-      "img": "assets/image-1.jpg"
+      "img": [
+        "assets/image-1.jpg",
+        "assets/image-6.jpg",
+        "assets/image-7.jpg",
+        "assets/image-8.jpg"
+      ]
     },
     {
       "id": 6,
-      "product_code": "G006",
+      "product_code": "B006",
       "price": "Rs:900",
       "quantity": 3,
-      "img": "assets/image-3.jpg"
+      "img": ["assets/image-3.jpg"]
     },
     {
       "id": 7,
-      "product_code": "G007",
+      "product_code": "B007",
       "price": "Rs:9000",
       "quantity": 11,
-      "img": "assets/image-2.webp"
+      "img": [
+        "assets/image-2.webp",
+        "assets/image-5.webp",
+        "assets/image-1.jpg",
+        "assets/image-8.jpg"
+      ]
     },
     {
       "id": 8,
-      "product_code": "G008",
+      "product_code": "B008",
       "price": "Rs:1100",
       "quantity": 7,
-      "img": "assets/image-4.webp"
+      "img": ["assets/image-4.webp"]
+    },
+    {
+      "id": 9,
+      "product_code": "B009",
+      "price": "Rs:5000",
+      "quantity": 12,
+      "img": ["assets/image-1.jpg", "assets/image-2.webp"]
+    },
+    {
+      "id": 10,
+      "product_code": "B010",
+      "price": "Rs:6500",
+      "quantity": 10,
+      "img": [
+        "assets/image-2.webp",
+        "assets/image-3.jpg",
+        "assets/image-4.webp"
+      ]
+    },
+    {
+      "id": 11,
+      "product_code": "B011",
+      "price": "Rs:7000",
+      "quantity": 13,
+      "img": ["assets/image-3.jpg"]
+    },
+    {
+      "id": 12,
+      "product_code": "B012",
+      "price": "Rs:500",
+      "quantity": 14,
+      "img": [
+        "assets/image-1.jpg",
+        "assets/image-2.webp",
+        "assets/image-4.webp"
+      ]
+    },
+    {
+      "id": 13,
+      "product_code": "B013",
+      "price": "Rs:5100",
+      "quantity": 9,
+      "img": ["assets/image-1.jpg"]
+    },
+    {
+      "id": 14,
+      "product_code": "B014",
+      "price": "Rs:900",
+      "quantity": 3,
+      "img": ["assets/image-3.jpg"]
+    },
+    {
+      "id": 15,
+      "product_code": "B015",
+      "price": "Rs:9000",
+      "quantity": 11,
+      "img": ["assets/image-2.webp"]
+    },
+    {
+      "id": 16,
+      "product_code": "B016",
+      "price": "Rs:1100",
+      "quantity": 7,
+      "img": ["assets/image-4.webp"]
+    },
+    {
+      "id": 17,
+      "product_code": "B017",
+      "price": "Rs:5100",
+      "quantity": 9,
+      "img": ["assets/image-1.jpg"]
+    },
+    {
+      "id": 18,
+      "product_code": "B018",
+      "price": "Rs:900",
+      "quantity": 3,
+      "img": ["assets/image-3.jpg"]
+    },
+    {
+      "id": 19,
+      "product_code": "B019",
+      "price": "Rs:9000",
+      "quantity": 11,
+      "img": ["assets/image-2.webp"]
+    },
+    {
+      "id": 20,
+      "product_code": "B020",
+      "price": "Rs:1100",
+      "quantity": 7,
+      "img": ["assets/image-4.webp"]
     }
   ]
 }
