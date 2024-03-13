@@ -8,12 +8,15 @@ const ImgContainer = styled.img`
   object-fit: cover;
 `;
 
-const CardBody = styled.div`
+const CardText = styled.div`
   font-size: 14px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
+`;
+const SubText = styled.div`
+  margin-bottom: 3px;
 `;
 
 const ProductCard = ({ product }) => {
@@ -33,17 +36,18 @@ const ProductCard = ({ product }) => {
     <div>
       <ImgContainer src={product.img[currentImgIndex]} />
       <hr />
-      <CardBody>
-        Product Code<br></br> {product.product_code}
-      </CardBody>
-      <CardBody>
-        Price<br></br>
+      <CardText>
+        <SubText>Product Code</SubText>
+        {product.product_code}
+      </CardText>
+      <CardText>
+        <SubText>Price</SubText>
         {product.price}
-      </CardBody>
-      <CardBody>
-        Quantity<br></br>
+      </CardText>
+      <CardText>
+        <SubText>Quantity</SubText>
         {product.quantity}
-      </CardBody>
+      </CardText>
     </div>
   );
 };
