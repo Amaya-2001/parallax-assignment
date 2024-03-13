@@ -23,7 +23,12 @@
       "product_code": "B003",
       "price": "Rs:7000",
       "quantity": 13,
-      "img": ["assets/image-3.jpg"]
+      "img": [
+        "assets/image-3.jpg",
+        "assets/image-7.jpg",
+        "assets/image-8.jpg",
+        "assets/image-6.jpg"
+      ]
     },
     {
       "id": 4,

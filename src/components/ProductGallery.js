@@ -10,17 +10,54 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
-  padding: 10px;
+  padding: 40px 10px;
   border: 3px solid rgb(256, 232, 47, 50%);
   overflow-y: auto;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fdf186;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(35, 31, 92, 100%);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: fit-content;
+    padding: 10px 0xp;
+    margin: 0px;
+  }
 `;
 
 const GridItem = styled.div`
@@ -33,6 +70,10 @@ const GridItem = styled.div`
   border-radius: 5px;
   width: 300px;
   height: 300px;
+
+  @media (max-width: 768px) {
+    margin: 20px 0px;
+  }
 `;
 const ProductGallery = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
