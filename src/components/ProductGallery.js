@@ -75,6 +75,7 @@ const GridItem = styled.div`
     margin: 20px 0px;
   }
 `;
+
 const ProductGallery = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productList, setProductList] = useState([]);
@@ -114,6 +115,7 @@ const ProductGallery = ({ products }) => {
       ]);
     }
   }, [currentPage, products]);
+
   return (
     <Container>
       <GridContainer>

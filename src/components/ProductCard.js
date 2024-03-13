@@ -15,6 +15,7 @@ const CardText = styled.div`
   margin-bottom: 10px;
   margin-top: 10px;
 `;
+
 const SubText = styled.div`
   margin-bottom: 3px;
 `;

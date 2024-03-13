@@ -1,4 +1,3 @@
-import "./App.css";
 import ProductGallery from "./components/ProductGallery";
 import productList from "../src/data/productList.json";
 
